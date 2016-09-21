@@ -30,7 +30,7 @@ def show_admin_menu_for_pages(context, pages):
 
     site = context['cms_current_site']
     language = context['preview_language']
-    return render_admin_rows(request, pages=pages, site=site, filtered=filtered, language=language)
+    return mark_safe(render_admin_rows(request, pages=pages, site=site, filtered=filtered, language=language))
 
 
 class TreePublishRow(Tag):
